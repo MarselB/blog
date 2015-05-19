@@ -39,17 +39,20 @@
 
 	<div id="main_content">
 		<div id="header">
+			<!-- ČE JE TRENUTNA STRAN ROOT_PATH PRIKAŽE VSE Poste-->
 			<% if current_page?(root_path) %>
 				<p>All Posts</p>
 			
-				
+				<!-- ČE BI BLO ŠE VEC STRANI BI LAHKA DRUGAM REDIRECTALA-->
 			<% else %>
 				<%= link_to "Back to All Posts", root_path %>
 			<% end %>
+			<!-- ČE UPORABNIK NI LOGINAN PRIKAŽE ZA LOGIN PA NEW POST-->
 				<% if !user_signed_in? %>
 			<button class="button"><%= link_to "Login", new_user_session_path %></p>
 				<button class="button"><%= link_to "New Post", new_post_path %></button>
 		<% end %>
+		<!-- ČE JE UPORABNIK LOGINAN MU PRIKAŽE ZA POST PA ZA LOGOUTAT SE -->
 			<% if user_signed_in? %>
 				<div class="buttons">
 					<button class="button"><%= link_to "New Post", new_post_path %></button>

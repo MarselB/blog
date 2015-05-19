@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
+	#DA RAZBERE ČE JE LOGINAN BO LAHKA KREATO POSTE DRUGAČ LAHKA ODJEBE
 	before_action :authenticate_user!, except: [:index, :show]
-	
+
 	def index 
 		@posts = Post.all.order('created_at DESC')
 	end
