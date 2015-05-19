@@ -10,9 +10,20 @@
 	<%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Do you really want to delete this post?'} %>
 
 <% end %>
- </p>
+<br>
+<div id="image">
+<%= image_tag(@post.picture_url, :width => 600) if @post.picture.present? %>
+	</div>
 
+ </p>
+<br>
+<br>
+<br>
  <p class="body">
 	<%= @post.body %>
  </p>
+</div>
+
+
+
 </div>
