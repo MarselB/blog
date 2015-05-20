@@ -34,7 +34,7 @@ def edit
 def update
 		@post = Post.find(params[:id])
 	
-	if @post.update(params[:post].permit(:tittle, :body))
+	if @post.update(params[:post].permit(:tittle, :body, :picture))
 		redirect_to @post
 	else
 		render 'edit'
@@ -49,6 +49,6 @@ end
 
 	private
 	def post_params
-		params.require(:post).permit(:title, :body)
+		params.require(:post).permit(:title, :body, :picture)
 	end
 end
