@@ -14,7 +14,15 @@ gem 'rails', '4.1.8'
 #
 #gem 'carrierwave'
 #Coach: Explain what libraries are and why they are useful. Describe what open source software is.
-gem 'sqlite3'
+group :development do
+	gem 'sqlite3'
+end
+
+group :production do
+	gem 'pg'
+end
+
+
 gem 'carrierwave'
 #:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::___1
 # Use SCSS for stylesheets
