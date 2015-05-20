@@ -13,10 +13,16 @@
 #
 #mount_uploader :picture, PictureUploader
 class Post < ActiveRecord::Base
+
+has_many :comments, dependent: :destroy
+
 #TOLE:::::
 mount_uploader :picture, PictureUploader
-#
-	validates :title, presence: true, length: { minimum:5 }
-	validates :body, presence: true
-end
 
+#
+	
+	validates :title, presence: true, length: { minimum: 5 }
+	validates :body, presence: true
+
+
+end
