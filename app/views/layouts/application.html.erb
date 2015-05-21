@@ -39,6 +39,7 @@
 		</ul>
 		
 	</div>
+	<!-- FANCY NOTIFICATION::::::::::::::::::::::::::::::::::::::::::::::::::::::::::-->
 <% if notice %>
 	<div id="notice_wrapper">
 				<p class="notice"><%= notice %></p>
@@ -47,6 +48,7 @@
 			<div id="notice_wrapper">
 				<p class="alert"><%= alert %></p>
 			</div>
+	<!--FANCY NOTIFICATION. END______________________________________________________________-->
 	
 <% end %>
 	<div id="main_content">
@@ -80,22 +82,12 @@
 
 
 
-		<% flash.each do |name, msg| %>
-			<%= content_tag(:div, msg, class: "alert") %>
-		<% end %>
+		
 
 		<%= yield %>
 	</div>
 
 
-<script>
-$(document).ready(function(){
-	setTimeout(function(){
-		$('#notice_wrapper').fadeOut("slow", function(){
-			$(this).remove();
-		})
-	}, 4500);
-});
-</script>
+
 </body>
 </html>
