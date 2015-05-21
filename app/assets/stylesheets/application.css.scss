@@ -1,5 +1,31 @@
 @import 'normalize';
 
+#notice_wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: rgba(135,216,211,0.85);
+.notice {
+  padding: 2.5rem 0;
+  text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: 1px;
+}.alert {
+  padding: 2.5rem 0;
+  text-align: center;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #FF0000;
+  letter-spacing: 1px;
+}
+
+}
+
 html, body {
  background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%); /* Chrome 10+, Saf5.1+ */
   background:    -moz-linear-gradient(90deg, #928DAB 10%, #1F1C2C 90%); /* FF3.6+ */
@@ -150,7 +176,6 @@ a {
     }
   }
   #post_content {
-
     padding: 1em 3em;
     .title {
       font-weight: 500;
@@ -211,13 +236,6 @@ a {
     }
   }
   #page_wrapper {
-background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%); /* Chrome 10+, Saf5.1+ */
-  background:    -moz-linear-gradient(90deg, #928DAB 10%, #1F1C2C 90%); /* FF3.6+ */
-  background:     -ms-linear-gradient(90deg, #928DAB 10%,#1F1C2C 90%); /* IE10 */
-  background:      -o-linear-gradient(90deg, #928DAB 10%, #1F1C2C 90%); /* Opera 11.10+ */
-  background:         linear-gradient(90deg, #928DAB 10%, #1F1C2C 90%); /* W3C */
-
-
     padding: 3em;
     #profile_image {
       width: 300px;
@@ -229,7 +247,6 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%); /* Chrome 
       }
     }
     #content {
-
       h1 {
         font-weight: 500;
       }
@@ -245,7 +262,6 @@ background: -webkit-linear-gradient(90deg, #1F1C2C 10%, #928DAB 90%); /* Chrome 
     }
   }
   .links {
-  
     margin: 2em 0;
   }
   input[type="text"], input[type="email"], input[type="password"], textarea {
